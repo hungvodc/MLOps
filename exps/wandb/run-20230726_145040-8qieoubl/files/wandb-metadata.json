@@ -1,0 +1,52 @@
+{
+    "os": "Windows-10-10.0.19041-SP0",
+    "python": "3.9.1",
+    "heartbeatAt": "2023-07-26T07:50:41.976202",
+    "startedAt": "2023-07-26T07:50:40.005686",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "config.num_epochs=1,2"
+    ],
+    "state": "running",
+    "program": "C:\\Users\\HungVo\\OneDrive\\M\u00e1y t\u00ednh\\deployment\\exps\\train.py",
+    "codePath": "OneDrive\\M\u00e1y t\u00ednh\\deployment\\exps\\train.py",
+    "git": {
+        "remote": "https://github.com/hungvodc/ita-ml-services.git",
+        "commit": "3dd077efb16ada07ea37315fcfddc10e8f7a738d"
+    },
+    "email": "hung.vo@deltacognition.com",
+    "root": "C:/Users/HungVo",
+    "host": "HungVo",
+    "username": "HungVo",
+    "executable": "C:\\Users\\HungVo\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+    "cpu_count": 6,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 2592.0,
+        "min": 0.0,
+        "max": 2592.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2592.0,
+            "min": 0.0,
+            "max": 2592.0
+        }
+    ],
+    "disk": {
+        "total": 475.6072235107422,
+        "used": 473.0592269897461
+    },
+    "gpu": "NVIDIA GeForce GTX 1650",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce GTX 1650",
+            "memory_total": 4294967296
+        }
+    ],
+    "memory": {
+        "total": 15.726203918457031
+    }
+}

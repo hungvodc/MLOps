@@ -1,0 +1,68 @@
+wandb_version: 1
+
+epochs:
+  desc: null
+  value: 10
+learning_rate:
+  desc: null
+  value: 0.0001
+save_frequency:
+  desc: null
+  value: 20
+save_path:
+  desc: null
+  value: pretrain/
+model_name:
+  desc: null
+  value: google/bert_uncased_L-2_H-128_A-2
+batch_size:
+  desc: null
+  value: 32
+save_model:
+  desc: null
+  value: true
+_wandb:
+  desc: null
+  value:
+    python_version: 3.9.1
+    cli_version: 0.15.5
+    framework: huggingface
+    huggingface_version: 4.30.2
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1690357840.021686
+    t:
+      1:
+      - 1
+      - 2
+      - 3
+      - 5
+      - 11
+      - 49
+      - 50
+      - 51
+      - 53
+      - 55
+      2:
+      - 1
+      - 2
+      - 3
+      - 5
+      - 11
+      - 49
+      - 50
+      - 51
+      - 53
+      - 55
+      - 71
+      3:
+      - 1
+      - 2
+      - 16
+      - 23
+      4: 3.9.1
+      5: 0.15.5
+      6: 4.30.2
+      8:
+      - 3
+      - 5

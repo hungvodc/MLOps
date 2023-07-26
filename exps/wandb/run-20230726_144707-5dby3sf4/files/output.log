@@ -1,0 +1,20 @@
+
+[33m2023-07-26 14:47:09 - __main__ - WARNING:[39m [33mTraining config: {'epochs': 10, 'learning_rate': 0.0001, 'save_frequency': 20, 'save_path': 'pretrain/', 'model_name': 'google/bert_uncased_L-2_H-128_A-2', 'batch_size': 32, 'save_model': True}
+Found cached dataset glue (C:/Users/HungVo/.cache/huggingface/datasets/glue/cola/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad)
+100%|█████████████████████████████| 3/3 [00:00<00:00, 499.86it/s]
+Loading cached processed dataset at C:\Users\HungVo\.cache\huggingface\datasets\glue\cola\1.0.0\dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad\cache-3241969054083878.arrow
+Loading cached processed dataset at C:\Users\HungVo\.cache\huggingface\datasets\glue\cola\1.0.0\dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad\cache-dfbaa5fa1710ec5f.arrow
+Some weights of the model checkpoint at google/bert_uncased_L-2_H-128_A-2 were not used when initializing BertModel: ['cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.bias', 'cls.seq_relationship.weight', 'cls.predictions.transform.LayerNorm.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+C:\Users\HungVo\AppData\Local\Programs\Python\Python39\lib\site-packages\transformers\optimization.py:411: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+
+
+
+
+
+
+
+
+ 77%|███████████████████▉      | 206/268 [00:16<00:05, 12.17it/s]

@@ -1,0 +1,34 @@
+2023-07-26 14:53:10,702 INFO    MainThread:16488 [wandb_setup.py:_flush():76] Current SDK version is 0.15.5
+2023-07-26 14:53:10,702 INFO    MainThread:16488 [wandb_setup.py:_flush():76] Configure stats pid to 16488
+2023-07-26 14:53:10,702 INFO    MainThread:16488 [wandb_setup.py:_flush():76] Loading settings from C:\Users\HungVo\.config\wandb\settings
+2023-07-26 14:53:10,702 INFO    MainThread:16488 [wandb_setup.py:_flush():76] Loading settings from C:\Users\HungVo\OneDrive\Máy tính\deployment\exps\wandb\settings
+2023-07-26 14:53:10,702 INFO    MainThread:16488 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-07-26 14:53:10,703 INFO    MainThread:16488 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'OneDrive\\Máy tính\\deployment\\exps\\train.py', 'program': 'C:\\Users\\HungVo\\OneDrive\\Máy tính\\deployment\\exps\\train.py'}
+2023-07-26 14:53:10,703 INFO    MainThread:16488 [wandb_init.py:_log_setup():507] Logging user logs to C:\Users\HungVo\OneDrive\Máy tính\deployment\exps\wandb\run-20230726_145310-7obgamld\logs\debug.log
+2023-07-26 14:53:10,704 INFO    MainThread:16488 [wandb_init.py:_log_setup():508] Logging internal logs to C:\Users\HungVo\OneDrive\Máy tính\deployment\exps\wandb\run-20230726_145310-7obgamld\logs\debug-internal.log
+2023-07-26 14:53:10,704 INFO    MainThread:16488 [wandb_init.py:init():547] calling init triggers
+2023-07-26 14:53:10,704 INFO    MainThread:16488 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {'epochs': 10, 'learning_rate': 0.0001, 'save_frequency': 20, 'save_path': 'pretrain/', 'model_name': 'google/bert_uncased_L-2_H-128_A-2', 'batch_size': 32, 'save_model': True}
+2023-07-26 14:53:10,704 INFO    MainThread:16488 [wandb_init.py:init():596] starting backend
+2023-07-26 14:53:10,704 INFO    MainThread:16488 [wandb_init.py:init():600] setting up manager
+2023-07-26 14:53:10,713 INFO    MainThread:16488 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=spawn, using: spawn
+2023-07-26 14:53:10,721 INFO    MainThread:16488 [wandb_init.py:init():606] backend started and connected
+2023-07-26 14:53:10,724 INFO    MainThread:16488 [wandb_init.py:init():705] updated telemetry
+2023-07-26 14:53:10,804 INFO    MainThread:16488 [wandb_init.py:init():738] communicating run to backend with 60.0 second timeout
+2023-07-26 14:53:11,542 INFO    MainThread:16488 [wandb_run.py:_on_init():2173] communicating current version
+2023-07-26 14:53:11,729 INFO    MainThread:16488 [wandb_run.py:_on_init():2182] got version response upgrade_message: "wandb version 0.15.7 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-07-26 14:53:11,729 INFO    MainThread:16488 [wandb_init.py:init():789] starting run threads in backend
+2023-07-26 14:53:13,266 INFO    MainThread:16488 [wandb_run.py:_console_start():2152] atexit reg
+2023-07-26 14:53:13,266 INFO    MainThread:16488 [wandb_run.py:_redirect():2007] redirect: SettingsConsole.WRAP_RAW
+2023-07-26 14:53:13,267 INFO    MainThread:16488 [wandb_run.py:_redirect():2072] Wrapping output streams.
+2023-07-26 14:53:13,267 INFO    MainThread:16488 [wandb_run.py:_redirect():2097] Redirects installed.
+2023-07-26 14:53:13,269 INFO    MainThread:16488 [wandb_init.py:init():830] run started, returning control to user process
+2023-07-26 14:53:23,075 INFO    MainThread:16488 [wandb_watch.py:watch():51] Watching
+2023-07-26 14:57:02,531 INFO    MainThread:16488 [wandb_run.py:_finish():1887] finishing run hungvdnk/cola_model/7obgamld
+2023-07-26 14:57:02,531 INFO    MainThread:16488 [wandb_run.py:_atexit_cleanup():2121] got exitcode: 0
+2023-07-26 14:57:02,532 INFO    MainThread:16488 [wandb_run.py:_restore():2104] restore
+2023-07-26 14:57:02,532 INFO    MainThread:16488 [wandb_run.py:_restore():2110] restore done
+2023-07-26 14:57:11,055 INFO    MainThread:16488 [wandb_run.py:_footer_history_summary_info():3464] rendering history
+2023-07-26 14:57:11,060 INFO    MainThread:16488 [wandb_run.py:_footer_history_summary_info():3496] rendering summary
+2023-07-26 14:57:11,097 INFO    MainThread:16488 [wandb_run.py:_footer_sync_info():3423] logging synced files

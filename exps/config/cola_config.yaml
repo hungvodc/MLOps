@@ -1,0 +1,27 @@
+model_name: "google/bert_uncased_L-2_H-128_A-2"
+
+defaults:
+  - override hydra/job_logging: colorlog
+  - override hydra/hydra_logging: colorlog
+
+model_layer:
+  linear_output_dim: 1  
+  max_token_length: 128
+
+learning_rate: 0.0001
+batch_size: 32
+num_epochs: 10
+eps: 0.000000001
+
+# Optimization
+optimizer: "adam"
+
+# Model saving and checkpoints
+save_frequency: 20
+save_path : "pretrain/"
+pretrain_model: "pretrain/cola_epoch_0"
+
+# Miscellaneous
+save_model: true
+random_seed: 42
+threshold: 0.5

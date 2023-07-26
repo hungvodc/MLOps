@@ -1,0 +1,130 @@
+
+[[33m2023-07-26 14:53:13] - [__main__] - [WARNING:[39m] [[33mTraining config: {'epochs': 10, 'learning_rate': 0.0001, 'save_frequency': 20, 'save_path': 'pretrain/', 'model_name': 'google/bert_uncased_L-2_H-128_A-2', 'batch_size': 32, 'save_model': True}[39m]
+Found cached dataset glue (C:/Users/HungVo/.cache/huggingface/datasets/glue/cola/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad)
+100%|█████████████████████████████| 3/3 [00:00<00:00, 375.14it/s]
+Loading cached processed dataset at C:\Users\HungVo\.cache\huggingface\datasets\glue\cola\1.0.0\dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad\cache-3241969054083878.arrow
+Loading cached processed dataset at C:\Users\HungVo\.cache\huggingface\datasets\glue\cola\1.0.0\dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad\cache-dfbaa5fa1710ec5f.arrow
+Some weights of the model checkpoint at google/bert_uncased_L-2_H-128_A-2 were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.decoder.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+C:\Users\HungVo\AppData\Local\Programs\Python\Python39\lib\site-packages\transformers\optimization.py:411: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+
+
+
+
+
+
+
+
+100%|██████████████████████████| 268/268 [00:21<00:00, 12.35it/s]
+100%|████████████████████████████| 33/33 [00:00<00:00, 34.85it/s]
+[[32m2023-07-26 14:53:45] - [__main__] - [INFO:[39m] [[32mtrain_loss: 0.6206535696983337 || train_acc: 0.6964618869936035 || val_loss: 0.6148930788040161 || val_acc: 0.6921850079744817[39m]
+
+
+
+
+
+
+
+
+100%|██████████████████████████| 268/268 [00:18<00:00, 14.57it/s]
+100%|████████████████████████████| 33/33 [00:01<00:00, 30.96it/s]
+[[32m2023-07-26 14:54:05] - [__main__] - [INFO:[39m] [[32mtrain_loss: 0.6010764837265015 || train_acc: 0.7039079157782515 || val_loss: 0.6094706654548645 || val_acc: 0.6931319776714513[39m]
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████| 268/268 [00:19<00:00, 13.44it/s]
+100%|████████████████████████████| 33/33 [00:01<00:00, 30.87it/s]
+[[32m2023-07-26 14:54:26] - [__main__] - [INFO:[39m] [[32mtrain_loss: 0.5701065063476562 || train_acc: 0.712853144989339 || val_loss: 0.6539512276649475 || val_acc: 0.6931319776714513[39m]
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████| 268/268 [00:21<00:00, 12.65it/s]
+100%|████████████████████████████| 33/33 [00:01<00:00, 23.61it/s]
+[[32m2023-07-26 14:54:49] - [__main__] - [INFO:[39m] [[32mtrain_loss: 0.5296881794929504 || train_acc: 0.7340751599147122 || val_loss: 0.6426776647567749 || val_acc: 0.6472787081339713[39m]
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████| 268/268 [00:20<00:00, 12.88it/s]
+100%|████████████████████████████| 33/33 [00:01<00:00, 29.13it/s]
+[[32m2023-07-26 14:55:11] - [__main__] - [INFO:[39m] [[32mtrain_loss: 0.4887409806251526 || train_acc: 0.7490338486140724 || val_loss: 0.6649226546287537 || val_acc: 0.6779804625199362[39m]
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████| 268/268 [00:21<00:00, 12.52it/s]
+100%|████████████████████████████| 33/33 [00:01<00:00, 32.56it/s]
+[[32m2023-07-26 14:55:33] - [__main__] - [INFO:[39m] [[32mtrain_loss: 0.45205622911453247 || train_acc: 0.7750533049040512 || val_loss: 0.7277483344078064 || val_acc: 0.64164673046252[39m]
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████| 268/268 [00:20<00:00, 12.90it/s]
+100%|████████████████████████████| 33/33 [00:01<00:00, 21.03it/s]
+[[32m2023-07-26 14:55:55] - [__main__] - [INFO:[39m] [[32mtrain_loss: 0.42787498235702515 || train_acc: 0.7867637260127932 || val_loss: 0.7533872127532959 || val_acc: 0.6412978468899522[39m]
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████| 268/268 [00:19<00:00, 13.56it/s]
+100%|████████████████████████████| 33/33 [00:01<00:00, 22.03it/s]
+[[32m2023-07-26 14:56:17] - [__main__] - [INFO:[39m] [[32mtrain_loss: 0.40512511134147644 || train_acc: 0.8025219882729211 || val_loss: 0.8172991871833801 || val_acc: 0.64478668261563[39m]
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████| 268/268 [00:21<00:00, 12.65it/s]
+100%|████████████████████████████| 33/33 [00:01<00:00, 30.19it/s]
+[[32m2023-07-26 14:56:39] - [__main__] - [INFO:[39m] [[32mtrain_loss: 0.37930020689964294 || train_acc: 0.8137826492537313 || val_loss: 0.8708679676055908 || val_acc: 0.6388058213716108[39m]
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████| 268/268 [00:20<00:00, 13.21it/s]
+100%|████████████████████████████| 33/33 [00:01<00:00, 27.64it/s]
+[[32m2023-07-26 14:57:01] - [__main__] - [INFO:[39m] [[32mtrain_loss: 0.36068329215049744 || train_acc: 0.8306902985074627 || val_loss: 0.8644262552261353 || val_acc: 0.6182715311004785[39m]
