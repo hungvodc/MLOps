@@ -6,7 +6,7 @@ defaults:
 
 model_layer:
   linear_output_dim: 1  
-  max_token_length: 128
+  max_token_length: 256  
 
 learning_rate: 0.0001
 batch_size: 32
@@ -20,6 +20,8 @@ optimizer: "adam"
 save_frequency: 20
 save_path : "pretrain/"
 pretrain_model: "pretrain/cola_epoch_0"
+onnx_converter_model: "pretrain/cola_epoch_0.onnx"
+example_sentence: "A boy are sitting on the bench"
 
 # Miscellaneous
 save_model: true

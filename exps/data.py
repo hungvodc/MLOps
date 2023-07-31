@@ -23,7 +23,7 @@ class DataModule():
             example['sentence'],
             truncation = True,
             padding = 'max_length',
-            max_length = int(config["model_layer"][1]["max_token_length"])
+            max_length = int(config["model_layer"]["max_token_length"])
         )
     
     def setup(self, stage=None):
