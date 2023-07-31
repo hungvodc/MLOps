@@ -1,8 +1,10 @@
-import yaml
 import hydra
-from hydra import initialize, compose
+import yaml
+from hydra import compose, initialize
 
-initialize("config") 
+initialize("config")
+
+
 def extract_config():
     cfg = compose(config_name="cola_config.yaml")
-    return cfg 
+    return cfg

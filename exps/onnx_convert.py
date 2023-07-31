@@ -1,14 +1,14 @@
-import onnx
-import os
 import logging
-import torch
-import joblib
-import colorlog
-import numpy as np
+import os
 
-from model import ColaModel
+import colorlog
+import joblib
+import numpy as np
+import onnx
+import torch
 from data import DataModule
 from extract_config import extract_config
+from model import ColaModel
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -16,19 +16,19 @@ logger.setLevel(logging.INFO)
 handler = logging.StreamHandler()  # Prints logs to the console
 formatter = colorlog.ColoredFormatter(
     (
-        '[%(log_color)s%(asctime)s] - [%(name)s] - [%(levelname)s:%(reset)s] '
-        '[%(log_color)s%(message)s%(reset)s]'
+        "[%(log_color)s%(asctime)s] - [%(name)s] - [%(levelname)s:%(reset)s] "
+        "[%(log_color)s%(message)s%(reset)s]"
     ),
-    datefmt='%Y-%m-%d %H:%M:%S',
+    datefmt="%Y-%m-%d %H:%M:%S",
     log_colors={
-        'DEBUG': 'cyan',
-        'INFO': 'green',
-        'WARNING': 'yellow',
-        'ERROR': 'red',
-        'CRITICAL': 'red,bg_white',
+        "DEBUG": "cyan",
+        "INFO": "green",
+        "WARNING": "yellow",
+        "ERROR": "red",
+        "CRITICAL": "red,bg_white",
     },
     reset=True,
-    style='%'
+    style="%",
 )
 handler.setFormatter(formatter)
 logger.addHandler(handler)
@@ -36,10 +36,9 @@ logger.addHandler(handler)
 config = extract_config()
 
 
-
 def convert_model():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model_path = config['pretrain_model']
+    model_path = config["pretrain_model"]
     logger.info(f"Loading pre-trained model from: {model_path}")
     cola_model = joblib.load(model_path)
 
@@ -60,7 +59,9 @@ def convert_model():
             input_sample["input_ids"].to(device),
             input_sample["attention_mask"].to(device),
         ),  # model input (or a tuple for multiple inputs)
-        config["onnx_converter_model"],  # where to save the model (can be a file or file-like object)
+        config[
+            "onnx_converter_model"
+        ],  # where to save the model (can be a file or file-like object)
         export_params=True,
         opset_version=10,
         input_names=["input_ids", "attention_mask"],  # the model's input names
@@ -72,9 +73,8 @@ def convert_model():
         },
     )
     onnx_path = config["onnx_converter_model"]
-    logger.info(
-        f"Model converted successfully. ONNX format model is at: {onnx_path}"
-    )
+    logger.info(f"Model converted successfully. ONNX format model is at: {onnx_path}")
+
 
 if __name__ == "__main__":
     convert_model()

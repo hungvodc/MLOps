@@ -1,10 +1,10 @@
 import numpy as np
 import onnxruntime as ort
-
 from data import DataModule
 from extract_config import extract_config
 
 config = extract_config()
+
 
 class ColaONNXPredictor:
     def __init__(self, model_path):
@@ -15,13 +15,17 @@ class ColaONNXPredictor:
     def predict(self, text):
         inference_sample = {"sentence": text}
         processed = self.processor.tokenize_data(inference_sample)
-        
+
         # expand dim for batch size
         ort_inputs = {
-            "input_ids": (np.expand_dims(processed["input_ids"], axis=0)).astype('int64'),
-            "attention_mask": np.expand_dims(processed["attention_mask"], axis=0).astype('int64'),
+            "input_ids": (np.expand_dims(processed["input_ids"], axis=0)).astype(
+                "int64"
+            ),
+            "attention_mask": np.expand_dims(
+                processed["attention_mask"], axis=0
+            ).astype("int64"),
         }
-        
+
         ort_outs = self.ort_session.run(None, ort_inputs)
         predictions = []
         for ele in ort_outs:
@@ -29,7 +33,7 @@ class ColaONNXPredictor:
                 predictions.append(self.labels[1])
             else:
                 predictions.append(self.labels[0])
-        
+
         for score in ort_outs:
             predictions.append({"score": score[0][0]})
         return predictions
