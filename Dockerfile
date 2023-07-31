@@ -2,6 +2,7 @@ FROM python:3.9.1-slim as base
 
 COPY ./ /app
 
+ENV GIT_PYTHON_REFRESH=quiet
 WORKDIR /app/deploy
 
 RUN pip install "dvc[gdrive]"
