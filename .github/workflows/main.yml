@@ -20,10 +20,11 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
       - name: Build container
+        env: 
+          SECRET_ARG1: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          SECRET_ARG2: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
-          docker build --build-arg AWS_ACCESS_KEY_ID="${{ secrets.AWS_ACCESS_KEY_ID }}" \
-                       --build-arg AWS_SECRET_ACCESS_KEY="${{ secrets.AWS_SECRET_ACCESS_KEY }}" \
-                       --tag mlops .
+          docker build --build-arg AWS_ACCESS_KEY_ID=$SECRET_ARG1 --build-arg AWS_SECRET_ACCESS_KEY=$SECRET_ARG2 --tag mlops .
       - name: Push2ECR
         id: ecr
         uses: jwalton/gh-ecr-push@v1
