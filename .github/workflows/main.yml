@@ -26,10 +26,10 @@ jobs:
                        --build-arg AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} \
                        --tag mlops-basics .
       - name: Push image to ECR
-          uses: jwalton/gh-ecr-push@v1
-          with:
-            access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-            secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-            region: us-east-1
-            image: mlops-basics:latest
+        uses: jwalton/gh-ecr-push@v1
+        with:
+          access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          region: us-east-1
+          image: mlops-basics:latest
           
