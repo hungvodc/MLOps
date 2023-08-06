@@ -21,7 +21,7 @@ jobs:
           aws-region: us-east-1
       - name: Build container
         run: |
-          docker build --build-arg AWS_ACCESS_KEY_ID = "${{secrets.AWS_ACCESS_KEY_ID}}" --build-arg AWS_SECRET_ACCESS_KEY = "${{secrets.AWS_SECRET_ACCESS_KEY}}" -t mlops .
+          docker build --build-arg AWS_ACCESS_KEY_ID = "${secrets.AWS_ACCESS_KEY_ID}" --build-arg AWS_SECRET_ACCESS_KEY = "${secrets.AWS_SECRET_ACCESS_KEY}" -t mlops .
       - name: Push image to ECR
         id: ecr
         uses: jwalton/gh-ecr-push@v1
