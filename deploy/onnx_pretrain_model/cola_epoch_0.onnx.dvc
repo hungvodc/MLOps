@@ -1,0 +1,5 @@
+outs:
+- md5: 9e0634d2cdae228b0002fdb01ad90afe
+  size: 17535928
+  hash: md5
+  path: cola_epoch_0.onnx
