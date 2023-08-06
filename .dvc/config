@@ -1,7 +1,0 @@
-[core]
-    no_scm = True
-    remote = storage
-['remote "storage"']
-    url = gdrive://1UzyWRdJtRhQ6_aMT3LCETUp3Kgx1Ywq9
-    gdrive_use_service_account = true
-    gdrive_service_account_json_file_path = ../exps/pretrain/exps/config/creds.json
