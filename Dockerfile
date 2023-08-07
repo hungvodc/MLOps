@@ -25,7 +25,7 @@ ENV MODULE_NAME="server"
 
 
 COPY ./ /${LAMBDA_TASK_ROOT}
-WORKDIR ${LAMBDA_TASK_ROOT}
+WORKDIR ${LAMBDA_TASK_ROOT}/deploy
 
 
 RUN python lambda_function.py
