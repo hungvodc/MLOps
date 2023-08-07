@@ -1,4 +1,4 @@
-FROM amazon/aws-lambda-python
+FROM public.ecr.aws/lambda/python:3.9
 
 COPY ./ /app
 
