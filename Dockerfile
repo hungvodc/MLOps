@@ -1,4 +1,4 @@
-FROM public.ecr.aws/lambda/python:3.9.1
+FROM public.ecr.aws/lambda/python:3.9
 
 COPY ./ /app
 
