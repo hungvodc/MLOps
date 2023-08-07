@@ -22,6 +22,7 @@ EXPOSE 8000
 
 ENV MODULE_NAME="server"
 
+WORKDIR /app
 
 RUN python lambda_function.py
 CMD ["lambda_function.lambda_handler"]
