@@ -1,12 +1,12 @@
 FROM lukewiwa/aws-lambda-python-sqlite:3.9
-COPY ./ /app
+COPY ./ /${LAMBDA_TASK_ROOT}
 
 ARG AWS_ACCESS_KEY_ID
 ARG AWS_SECRET_ACCESS_KEY
 
 
 ENV GIT_PYTHON_REFRESH=quiet
-WORKDIR /app/deploy
+WORKDIR ${LAMBDA_TASK_ROOT}
 
 ENV AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \ 
     AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
@@ -17,10 +17,12 @@ RUN dvc init --no-scm
 RUN dvc remote add -d model-store s3://mlopshungvo/
 RUN dvc pull ../deploy/onnx_pretrain_model/cola_epoch_0.onnx.dvc
 
-WORKDIR ${LAMBDA_TASK_ROOT}
+
 
 EXPOSE 8000
 
 ENV MODULE_NAME="server"
 
+
+RUN python lambda_function.py
 CMD ["lambda_function.lambda_handler"]
