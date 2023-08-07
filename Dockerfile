@@ -24,4 +24,4 @@ ENV MODULE_NAME="server"
 
 
 RUN python lambda_handler.py
-CMD [ "lambda_handler.lambda_handler"]
+CMD ["deploy/lambda_handler.lambda_handler"]
