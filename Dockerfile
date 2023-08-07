@@ -26,5 +26,4 @@ ENV MODULE_NAME="server"
 
 
 RUN python lambda_handler.py
-RUN chmod -R 0755 $MODEL_DIR
 CMD [ "lambda_handler.lambda_handler"]
