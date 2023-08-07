@@ -1,11 +1,11 @@
 import sys
 import json
 
-sys.path.append("../exps")
+sys.path.append("exps")
 from extract_config import extract_config
 from onnx_inference import ColaONNXPredictor
 
-onnx_model_path = r"onnx_pretrain_model/cola_epoch_0.onnx"
+onnx_model_path = r"deploy/onnx_pretrain_model/cola_epoch_0.onnx"
 predictor = ColaONNXPredictor(onnx_model_path)
 
 def lambda_handler(event, context):
