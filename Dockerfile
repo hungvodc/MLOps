@@ -1,4 +1,4 @@
-FROM python:3.9.1-slim as base
+FROM lukewiwa/aws-lambda-python-sqlite:3.9
 COPY ./ /app
 
 ARG AWS_ACCESS_KEY_ID
