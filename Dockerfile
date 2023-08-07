@@ -1,5 +1,4 @@
-FROM public.ecr.aws/lambda/python:3.11
-
+FROM python:3.9.1-slim as base
 COPY ./ /app
 
 ARG AWS_ACCESS_KEY_ID
