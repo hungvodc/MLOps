@@ -14,7 +14,6 @@ ENV AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
     AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
 
 RUN pip install "dvc[s3]"
-RUN pip3 install torch==2.0.1+cpu
 RUN pip install -r requirements.txt
 RUN dvc init --no-scm
 RUN dvc remote add -d model-store s3://mlopshungvo/
@@ -26,4 +25,6 @@ EXPOSE 8000
 ENV MODULE_NAME="server"
 
 
-CMD ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+RUN python lambda_handler.py
+RUN chmod -R 0755 $MODEL_DIR
+CMD [ "lambda_handler.lambda_handler"]
