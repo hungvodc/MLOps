@@ -4,8 +4,6 @@ COPY ./ /app
 ARG AWS_ACCESS_KEY_ID
 ARG AWS_SECRET_ACCESS_KEY
 
-RUN yum install git -y && yum -y install gcc-c++
-
 
 ENV GIT_PYTHON_REFRESH=quiet
 WORKDIR /app/deploy
