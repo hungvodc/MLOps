@@ -1,4 +1,4 @@
-FROM python:3.9.1-slim as base
+FROM public.ecr.aws/lambda/python:3.9.1
 
 COPY ./ /app
 
