@@ -12,7 +12,7 @@ ENV GIT_PYTHON_REFRESH=quiet
 ENV AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \ 
     AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
 
-RUN apt-get update && apt-get install -y sqlite3=3.36.0-1
+RUN /bin/bash -c "apt-get update && apt-get install -y sqlite3=3.36.0-1"
 
 RUN pip install "dvc[s3]"
 
