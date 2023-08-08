@@ -1,4 +1,4 @@
-FROM amazon/aws-lambda-python:3.9.2023.08.02.09
+FROM lukewiwa/aws-lambda-python-sqlite:3.9
 COPY ./ /app
 
 ARG AWS_ACCESS_KEY_ID
@@ -13,7 +13,6 @@ ENV AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
 
 RUN pip install "dvc[s3]"
 RUN pip uninstall python3-botocore
-RUN pip install botocore
 RUN pip install -r requirements.txt
 RUN dvc init --no-scm
 RUN dvc remote add -d model-store s3://mlopshungvo/
