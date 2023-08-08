@@ -1,5 +1,5 @@
 FROM lukewiwa/aws-lambda-python-sqlite:3.9
-COPY ./ /app
+COPY ./ /
 
 ARG AWS_ACCESS_KEY_ID
 ARG AWS_SECRET_ACCESS_KEY
