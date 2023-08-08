@@ -13,7 +13,7 @@ ENV AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
 
 RUN pip install "dvc[s3]"
 RUN pip uninstall python3-botocore
-RUN pip uninstall botocore
+RUN pip uninstall -y botocore
 RUN pip install -r requirements.txt
 RUN pip install --upgrade boto3 awscli
 RUN dvc init --no-scm
