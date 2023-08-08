@@ -27,7 +27,7 @@ def lambda_handler(event, context):
 
   #print autoscaling_group_to_suspend
     import re
-    regex = re.compile(r'es-data-asg|consul|influxdb|vault|es-master')
+    regex = re.compile(r'es-data-asg|consul|influxdb|vault|es-master|compress')
     filtered = filter(lambda i: not regex.search(i), autoscaling_group_to_suspend)
     filtered = [i for i in autoscaling_group_to_suspend if not regex.search(i)]
     
