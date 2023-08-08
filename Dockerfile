@@ -12,6 +12,7 @@ ENV AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
     AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
 
 RUN pip install "dvc[s3]"
+RUN pip uninstall python3-botocore
 RUN pip install botocore
 RUN pip install -r requirements.txt
 RUN dvc init --no-scm
