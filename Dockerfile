@@ -14,7 +14,7 @@ ENV AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
 
 
 RUN pip install "dvc[s3]"
-
+RUN pip install --upgrade boto3 awscli
 RUN pip install -r requirements.txt 
 RUN dvc init --no-scm
 RUN dvc remote add -d model-store s3://mlopshungvo/
