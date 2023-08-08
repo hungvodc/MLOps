@@ -22,7 +22,7 @@ EXPOSE 8000
 
 ENV MODULE_NAME="server"
 
-COPY lambda_function.py ${LAMBDA_TASK_ROOT}/
+COPY /lambda_function.py ${LAMBDA_TASK_ROOT}/
 RUN python lambda_function.py
 EXPOSE 8000
 #CMD ["lambda_function.lambda_handler"]
