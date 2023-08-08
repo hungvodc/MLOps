@@ -1,4 +1,5 @@
-FROM lukewiwa/aws-lambda-python-sqlite:3.9
+FROM python:3.9.1-slim as base
+#FROM lukewiwa/aws-lambda-python-sqlite:3.9
 #FROM amazon/aws-lambda-python:3.9.2023.08.02.09
 COPY ./ /app
 
@@ -14,7 +15,6 @@ ENV AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
 
 
 RUN pip install "dvc[s3]"
-RUN pip install --upgrade boto3 awscli
 RUN pip install -r requirements.txt 
 RUN dvc init --no-scm
 RUN dvc remote add -d model-store s3://mlopshungvo/
@@ -28,5 +28,5 @@ COPY deploy/lambda_function.py ${LAMBDA_TASK_ROOT}/
 EXPOSE 8000
 
 
-CMD ["lambda_function.lambda_handler"]
-#CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000", "reload"]
+#CMD ["lambda_function.lambda_handler"]
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000", "reload"]
