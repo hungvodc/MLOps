@@ -22,3 +22,6 @@ async def home():
 async def get_prediction(text: str):
     result = predictor.predict(text)
     return result[0]
+
+if __name__ == '__main__':
+    uvicorn.run(app, host="0.0.0.0", port=8000)
