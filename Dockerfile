@@ -12,7 +12,8 @@ ENV GIT_PYTHON_REFRESH=quiet
 ENV AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \ 
     AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
 
- RUN wget "https://www.sqlite.org/2018/sqlite-autoconf-3260000.tar.gz" && tar xzf sqlite-autoconf-3260000.tar.gz && cd sqlite-autoconf-3260000 && ./configure --disable-static --enable-fts5 --enable-json1 CFLAGS="-g -O2 -DSQLITE_ENABLE_FTS3=1 -DSQLITE_ENABLE_FTS4=1 -DSQLITE_ENABLE_RTREE=1 -DSQLITE_ENABLE_JSON1" && make && make install 
+RUN apt-get update && apt-get install -y sqlite3=3.36.0-1
+
 RUN pip install "dvc[s3]"
 
 RUN pip install -r requirements.txt
