@@ -1,9 +1,10 @@
 FROM lukewiwa/aws-lambda-python-sqlite:3.9
-COPY ./ /
+COPY ./ /app
 
 ARG AWS_ACCESS_KEY_ID
 ARG AWS_SECRET_ACCESS_KEY
 
+WORKDIR app/deploy
 
 ENV GIT_PYTHON_REFRESH=quiet
 
@@ -23,5 +24,5 @@ ENV MODULE_NAME="server"
 
 COPY deploy/lambda_function.py ${LAMBDA_TASK_ROOT}/
 EXPOSE 8000
-CMD ["lambda_function.lambda_handler"]
-#CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000", "reload"]
+#CMD ["lambda_function.lambda_handler"]
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000", "reload"]
