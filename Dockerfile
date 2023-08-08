@@ -26,4 +26,6 @@ EXPOSE 8000
 
 
 #CMD ["lambda_function.lambda_handler"]
-CMD ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "8000", "reload"]
+#CMD ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "8000", "reload"] # case old
+
+CMD ["python", "server.py"] # case new
